@@ -29,9 +29,9 @@ delete = [
 # Translation catalogs: drop the Discord entries (the strings are gone from the UI); other
 # ArtCraft mentions become FreeANDIY below, so complete catalogs stay complete.
 [[drop_lines]]
-include = ["crates/ui-egui/src/i18n/*.tsv"]
-regex = '^[^#\n]*Discord'
-min = 0
+include = ["crates/ui-egui/src/i18n/*.rs"]
+regex = '^\s*"[^"\n]*Discord'
+min = 1
 
 # ---------------------------------------------------------------------------------------------
 # Identifiers, maintainers, URLs.
