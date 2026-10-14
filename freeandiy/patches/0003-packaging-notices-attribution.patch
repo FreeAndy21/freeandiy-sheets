@@ -1,0 +1,139 @@
+diff --git a/ATTRIBUTION.md b/ATTRIBUTION.md
+index 36678d8..0184526 100644
+--- a/ATTRIBUTION.md
++++ b/ATTRIBUTION.md
+@@ -8,33 +8,6 @@ Generated-in-code art is original and has no file to list: the UI icon set (`cra
+ 
+ | Asset | Author | Source | Licence | Notes |
+ |---|---|---|---|---|
+-| `docs/brand/artcraft-logo.svg` | ArtCraft Team | craftrules `assets/brand/` | ArtCraft brand terms (`docs/brand/LICENSE-brand.txt`) | Trademark, not open source |
+-| `docs/brand/artcraft-logo.png` | ArtCraft Team | craftrules `assets/brand/` | ArtCraft brand terms | Trademark |
+-| `docs/brand/artcraft-logo-white.svg` | ArtCraft Team | craftrules `assets/brand/` | ArtCraft brand terms | Trademark |
+-| `docs/brand/artcraft-logo-white.png` | ArtCraft Team | craftrules `assets/brand/` | ArtCraft brand terms | Trademark |
+-| `docs/brand/artcraft-mark.svg` | ArtCraft Team | craftrules `assets/brand/` | ArtCraft brand terms | Trademark |
+-| `docs/brand/artcraft-mark.png` | ArtCraft Team | craftrules `assets/brand/` | ArtCraft brand terms | Trademark |
+-| `docs/brand/artcraft-mark-black.svg` | ArtCraft Team | craftrules `assets/brand/` | ArtCraft brand terms | Trademark |
+-| `docs/brand/artcraft-mark-black.png` | ArtCraft Team | craftrules `assets/brand/` | ArtCraft brand terms | Trademark |
+-| `docs/brand/LICENSE-brand.txt` | (licence text) | craftrules | — | |
+-| `assets/app-icon/gridcraft.svg` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | PLACEHOLDER app icon (ledger page); replaced by the owner's creature art later |
+-| `packaging/macos/dmg/background.svg` | @XusBadia | original (hand-written SVG, derived from the GridCraft app icon `assets/app-icon/gridcraft.svg`, referenced via `<image>`, not copied; text is outlined glyph paths; `packaging/macos/dmg/generate.py` renders it to `background.tiff`) | MIT OR Apache-2.0 (`LICENSE-MIT`, `LICENSE-APACHE`) | GridCraft macOS DMG window background for the Finder window; added 2026-10-08 |
+-| `packaging/macos/dmg/background.tiff` | @XusBadia | Rendered from `packaging/macos/dmg/background.svg` by `packaging/macos/dmg/generate.py` | MIT OR Apache-2.0 (`LICENSE-MIT`, `LICENSE-APACHE`) | 1x + 2x HiDPI TIFF for the macOS DMG window; includes the app icon (see its row) and LittleCMS's built-in sRGB profile ("No copyright, use freely") |
+-| `assets/app-icon/gridcraft-1024.png` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | Placeholder icon, rendered from gridcraft.svg |
+-| `assets/app-icon/gridcraft-macos-512.png` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | Placeholder icon, macOS grid render |
+-| `assets/app-icon/gridcraft.icns` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | Placeholder icon, macOS bundle icon |
+-| `assets/app-icon/gridcraft.ico` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | Placeholder icon, Windows exe icon |
+-| `assets/app-icon/hicolor/16x16/apps/ai.storyteller.gridcraft.png` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | Placeholder icon, Linux hicolor render |
+-| `assets/app-icon/hicolor/24x24/apps/ai.storyteller.gridcraft.png` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | Placeholder icon, Linux hicolor render |
+-| `assets/app-icon/hicolor/32x32/apps/ai.storyteller.gridcraft.png` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | Placeholder icon, Linux hicolor render |
+-| `assets/app-icon/hicolor/48x48/apps/ai.storyteller.gridcraft.png` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | Placeholder icon, Linux hicolor render |
+-| `assets/app-icon/hicolor/64x64/apps/ai.storyteller.gridcraft.png` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | Placeholder icon, Linux hicolor render |
+-| `assets/app-icon/hicolor/128x128/apps/ai.storyteller.gridcraft.png` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | Placeholder icon, Linux hicolor render |
+-| `assets/app-icon/hicolor/256x256/apps/ai.storyteller.gridcraft.png` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | Placeholder icon, Linux hicolor render |
+-| `assets/app-icon/hicolor/512x512/apps/ai.storyteller.gridcraft.png` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | Placeholder icon, Linux hicolor render |
+-| `assets/app-icon/hicolor/scalable/apps/ai.storyteller.gridcraft.svg` | GridCraft contributors | original (hand-written SVG; `packaging/icons.sh`) | MIT OR Apache-2.0 (`assets/app-icon/LICENSE.txt`) | Placeholder icon, copy of gridcraft.svg |
+-| `assets/app-icon/README.md` | GridCraft contributors | original | MIT OR Apache-2.0 | Icon documentation |
+-| `assets/app-icon/LICENSE.txt` | (licence text) | original | — | Licence of the app icon files |
+ | `docs/images/hero-sales.png` | GridCraft contributors | screenshot of GridCraft rendered offscreen (`crates/ui-egui/examples/snapshot.rs`) showing an original sample workbook | MIT OR Apache-2.0 | README screenshot; no third-party content |
+ | `docs/images/budget.png` | GridCraft contributors | screenshot of GridCraft rendered offscreen (`crates/ui-egui/examples/snapshot.rs`) showing an original sample workbook | MIT OR Apache-2.0 | README screenshot; no third-party content |
+ | `docs/images/grades-formulas.png` | GridCraft contributors | screenshot of GridCraft rendered offscreen (`crates/ui-egui/examples/snapshot.rs`) showing an original sample workbook | MIT OR Apache-2.0 | README screenshot; no third-party content |
+@@ -42,3 +15,17 @@ Generated-in-code art is original and has no file to list: the UI icon set (`cra
+ | `docs/images/pivot.png` | GridCraft contributors | screenshot of GridCraft rendered offscreen (`crates/ui-egui/examples/snapshot.rs`) showing an original sample workbook | MIT OR Apache-2.0 | README screenshot; no third-party content |
+ | `docs/images/format-chart.png` | GridCraft contributors | screenshot of GridCraft rendered offscreen (`crates/ui-egui/examples/snapshot.rs`) showing an original sample workbook | MIT OR Apache-2.0 | README screenshot; no third-party content |
+ | `docs/images/page-break.png` | GridCraft contributors | screenshot of GridCraft rendered offscreen (`crates/ui-egui/examples/snapshot.rs`) showing an original sample workbook | MIT OR Apache-2.0 | README screenshot; no third-party content |
++
++## FreeANDIY (added by the FreeANDIY fork)
++
++Every file under these directories is covered by its row; `cargo xtask assets` accepts any path
++under a listed `` `freeandiy/...` ``, `` `assets/app-icon/` `` or `` `packaging/macos/dmg/` `` directory.
++
++| Asset | Author | Source | Licence | Notes |
++|---|---|---|---|---|
++| `freeandiy/assets/fonts/` | IBM Corp. (IBM Plex Sans, IBM Plex Mono); The Roboto Project Authors (Roboto) | https://github.com/IBM/plex, https://github.com/googlefonts/roboto-3-classic | OFL-1.1 (`freeandiy/assets/fonts/OFL-*.txt`) | UI fonts (Plex) and long-form text (Roboto) |
++| `freeandiy/assets/brand/` | Free Andy Agency | Original work | **Not open source**: © Free Andy Agency, all rights reserved (`freeandiy/assets/brand/LICENSE-brand.txt`) | FreeANDIY and Free Andy Agency names, the angel Andy, lettering, logotypes, seal |
++| `freeandiy/assets/icons/` | Free Andy Agency | Original work, generated by `tools/make_icons.py` (FreeANDIY meta repository) | **Not open source**: © Free Andy Agency (`freeandiy/assets/brand/LICENSE-brand.txt`) | App icons |
++| `freeandiy/assets/dmg/` | Free Andy Agency | Original work, generated by `freeandiy/tools/make_dmg.py` | **Not open source**: © Free Andy Agency (`freeandiy/assets/brand/LICENSE-brand.txt`) | DMG background and layout |
++| `assets/app-icon/` | Free Andy Agency | Copied from `freeandiy/assets/icons/sheets/` by the rebrand | **Not open source**: © Free Andy Agency (`freeandiy/assets/brand/LICENSE-brand.txt`) | App icon |
++| `packaging/macos/dmg/` | Free Andy Agency | Copied from `freeandiy/assets/dmg/` by the rebrand | **Not open source**: © Free Andy Agency (`freeandiy/assets/brand/LICENSE-brand.txt`) | DMG background and layout |
+diff --git a/NOTICE b/NOTICE
+index 1e3668b..a1999fd 100644
+--- a/NOTICE
++++ b/NOTICE
+@@ -3,9 +3,9 @@ Copyright (c) 2026 ArtCraft Team and the GridCraft contributors.
+ Licensed under the MIT License or the Apache License, Version 2.0, at your option
+ (LICENSE-MIT, LICENSE-APACHE).
+ 
+-The ArtCraft name, wordmark and logos in docs/brand/ are trademarks of the ArtCraft Team. They are
+-not open source and are not covered by the license above; their terms are in
+-docs/brand/LICENSE-brand.txt.
++The ArtCraft name, wordmark and logos are trademarks of the ArtCraft Team. They are not open
++source and are not covered by the license above. As their terms require of modified versions,
++the FreeANDIY fork has removed them (upstream's docs/brand/ directory is not part of this tree).
+ 
+ Third-party material
+ 
+@@ -14,3 +14,26 @@ list (author, source, license) is in ATTRIBUTION.md.
+ 
+ None: every bundled asset is original to GridCraft. Builds made with craft-fonts
+ (CRAFT_FONTS_DIR) embed the fonts listed in ATTRIBUTION.md under the SIL Open Font License 1.1.
++
++-------------------------------------------------------------------------------------------------
++FreeANDIY Sheets
++
++FreeANDIY Sheets is a modified version of GridCraft, made by Free Andy Agency
++(https://freeandy.agency). FreeANDIY is not affiliated with, sponsored or endorsed by the ArtCraft
++Team.
++Modifications Copyright (c) 2026 Free Andy Agency, licensed like GridCraft under the MIT License
++or the Apache License, Version 2.0, at your option.
++
++Changed files (Apache-2.0 section 4(b)): FreeANDIY's changes are generated from the freeandiy/
++directory by freeandiy/tools/rebrand: the patches in freeandiy/patches/, the text rules in
++freeandiy/rules.toml and the files copied from freeandiy/. Every file that differs from upstream
++GridCraft is listed by `git diff upstream-main main --stat`, and CHANGELOG-FREEANDIY.md
++summarises the changes. New files carry a "Modified-by: FreeANDIY" header where their format
++allows comments.
++
++The FreeANDIY and Free Andy Agency names, the angel Andy, the lettering, logotypes, seal and app
++icons are protected by copyright, are the property of Free Andy Agency and are NOT covered by
++the licenses above; see freeandiy/assets/brand/LICENSE-brand.txt.
++
++FreeANDIY bundles IBM Plex Sans and IBM Plex Mono (IBM Corp.) and Roboto (The Roboto Project
++Authors) under the SIL Open Font License 1.1; see freeandiy/assets/fonts/OFL-*.txt.
+diff --git a/packaging/env.sh b/packaging/env.sh
+index bacb167..96bbb9f 100644
+--- a/packaging/env.sh
++++ b/packaging/env.sh
+@@ -47,9 +47,12 @@ warn() {
+ # Copy licence and readme files that exist into a package directory.
+ copy_docs() {
+   local dest="$1" f
+-  for f in README.md LICENSE LICENSE-MIT LICENSE-APACHE COPYRIGHT; do
++  for f in README.md LICENSE LICENSE-MIT LICENSE-APACHE COPYRIGHT NOTICE ATTRIBUTION.md CHANGELOG-FREEANDIY.md; do
+     if [ -f "$ROOT/$f" ]; then cp "$ROOT/$f" "$dest/"; fi
+   done
++  # FreeANDIY: the bundled UI fonts' licences and the brand terms (Apache-2.0 4(d): NOTICE above).
++  cp "$ROOT"/freeandiy/assets/fonts/OFL-*.txt "$dest/"
++  cp "$ROOT/freeandiy/assets/brand/LICENSE-brand.txt" "$dest/LICENSE-FreeANDIY-brand.txt"
+   copy_font_licences "$dest"
+ }
+ 
+diff --git a/xtask/src/assets.rs b/xtask/src/assets.rs
+index c9bbcd1..c0526ad 100644
+--- a/xtask/src/assets.rs
++++ b/xtask/src/assets.rs
+@@ -33,7 +33,15 @@ pub fn is_asset(path: &str) -> bool {
+ 
+ /// Paths that need an ATTRIBUTION.md row but lack one.
+ pub fn missing(files: &[String], attribution: &str) -> Vec<String> {
+-    files.iter().filter(|f| is_asset(f) && !attribution.contains(&format!("`{f}`"))).cloned().collect()
++    files.iter().filter(|f| is_asset(f) && !attribution.contains(&format!("`{f}`")) && !in_listed_dir(f, attribution)).cloned().collect()
++}
++
++/// FreeANDIY: the fork's generated asset directories are attributed as a whole (a row for
++/// `` `assets/app-icon/` `` covers every file in it).
++fn in_listed_dir(f: &str, attribution: &str) -> bool {
++    ["freeandiy/assets/fonts/", "freeandiy/assets/brand/", "freeandiy/assets/icons/", "freeandiy/assets/dmg/", "assets/app-icon/", "packaging/macos/dmg/"]
++        .iter()
++        .any(|d| f.starts_with(d) && attribution.contains(&format!("`{d}`")))
+ }
+ 
+ pub fn run(root: &Path) -> Result<(), String> {

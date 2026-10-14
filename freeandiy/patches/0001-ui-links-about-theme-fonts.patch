@@ -1,0 +1,94 @@
+diff --git a/apps/gridcraft/src/native_menu.rs b/apps/gridcraft/src/native_menu.rs
+index 6985af3..fa76d7c 100644
+--- a/apps/gridcraft/src/native_menu.rs
++++ b/apps/gridcraft/src/native_menu.rs
+@@ -175,7 +175,6 @@ fn tree() -> Vec<(&'static str, Vec<Entry>)> {
+                 ("Agent Control (MCP)…", "dialog:agents", None),
+                 ("Contributors…", "dialog:about:Contributors", None),
+                 ("GridCraft on getartcraft.com", "url:https://getartcraft.com/apps/gridcraft", None),
+-                ("Join the ArtCraft Discord…", "url:https://discord.gg/artcraft", None),
+             ],
+         ),
+     ]
+diff --git a/crates/ui-egui/src/dialogs.rs b/crates/ui-egui/src/dialogs.rs
+index fb899c7..613222e 100644
+--- a/crates/ui-egui/src/dialogs.rs
++++ b/crates/ui-egui/src/dialogs.rs
+@@ -1486,9 +1486,11 @@ fn about(ui: &mut egui::Ui, d: &mut Dialog) {
+             ui.heading("GridCraft");
+             ui.label(format!("Version {}", env!("CARGO_PKG_VERSION")));
+             ui.add_space(4.0);
+-            ui.label("A clean-room, open-source, Rust-native spreadsheet. Part of ArtCraft.");
++            ui.label("A clean-room, open-source, Rust-native spreadsheet.");
+             ui.hyperlink_to("getartcraft.com/apps/gridcraft", "https://getartcraft.com/apps/gridcraft");
+-            ui.hyperlink_to("Join the ArtCraft Discord", "https://discord.gg/artcraft");
++            ui.hyperlink_to("github.com/storytold/gridcraft", "https://github.com/storytold/gridcraft");
++            ui.add_space(8.0);
++            crate::freeandiy::about_attribution(ui);
+         }
+     }
+ }
+diff --git a/crates/ui-egui/src/lib.rs b/crates/ui-egui/src/lib.rs
+index f96cdac..a08a22b 100644
+--- a/crates/ui-egui/src/lib.rs
++++ b/crates/ui-egui/src/lib.rs
+@@ -17,6 +17,7 @@ pub mod editor;
+ pub mod fonts;
+ pub mod formula_bar;
+ mod formula_locale;
++pub mod freeandiy;
+ pub mod grid;
+ pub mod i18n;
+ pub mod icons;
+diff --git a/crates/ui-egui/src/theme.rs b/crates/ui-egui/src/theme.rs
+index 485b9a2..fe7c923 100644
+--- a/crates/ui-egui/src/theme.rs
++++ b/crates/ui-egui/src/theme.rs
+@@ -54,7 +54,7 @@ pub struct Tokens {
+ 
+ impl Tokens {
+     pub fn light() -> Tokens {
+-        Tokens {
++        crate::freeandiy::tokens(Tokens {
+             dark: false,
+             window: Color32::from_rgb(0xF3, 0xF3, 0xF3),
+             ribbon: Color32::from_rgb(0xFF, 0xFF, 0xFF),
+@@ -92,11 +92,11 @@ impl Tokens {
+             notice_warn_border: Color32::from_rgb(0xF0, 0xC3, 0x6E),
+             notice_info_bg: Color32::from_rgb(0xEA, 0xF2, 0xFB),
+             notice_info_border: Color32::from_rgb(0xB9, 0xD2, 0xEC),
+-        }
++        })
+     }
+ 
+     pub fn dark() -> Tokens {
+-        Tokens {
++        crate::freeandiy::tokens(Tokens {
+             dark: true,
+             window: Color32::from_rgb(0x29, 0x29, 0x29),
+             ribbon: Color32::from_rgb(0x33, 0x33, 0x33),
+@@ -134,7 +134,7 @@ impl Tokens {
+             notice_warn_border: Color32::from_rgb(0x7A, 0x67, 0x30),
+             notice_info_bg: Color32::from_rgb(0x24, 0x33, 0x44),
+             notice_info_border: Color32::from_rgb(0x3B, 0x55, 0x72),
+-        }
++        })
+     }
+ 
+     pub fn get(ctx: &egui::Context) -> Tokens {
+@@ -430,6 +430,7 @@ pub fn font_definitions_with(language: crate::i18n::Language, used: &[String]) -
+             }
+         }
+     }
++    crate::freeandiy::ui_fonts(&mut fonts);
+     // Default proportional text in widgets uses the UI font.
+     if let Some(ui) = fonts.families.get(&FontFamily::Name(UI.into())).cloned() {
+         fonts.families.insert(FontFamily::Proportional, ui);
+@@ -696,6 +697,7 @@ pub fn apply(ctx: &egui::Context, dark: bool) {
+         v.window_corner_radius = egui::CornerRadius::same(10);
+         v.menu_corner_radius = egui::CornerRadius::same(8);
+         v.popup_shadow = egui::epaint::Shadow { offset: [0, 4], blur: 16, spread: 0, color: t.shadow };
++        crate::freeandiy::visuals(&mut v);
+         ctx.set_visuals_of(theme, v);
+     }
+     ctx.options_mut(|o| o.fallback_theme = egui::Theme::Light);
