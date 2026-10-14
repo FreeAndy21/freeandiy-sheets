@@ -7,7 +7,7 @@ use crate::backend::Backend;
 
 /// Error for methods that need a window.
 pub(crate) const NO_UI: &str = "no UI in headless mode: start the app with `gridcraft --control 7979` and run the MCP server \
-with `gridcraft-cli mcp --connect 7979`";
+with `freeandiy-sheets-cli mcp --connect 7979`";
 
 /// Headless backend: a [`Session`] with one blank workbook to start with.
 pub struct Headless {

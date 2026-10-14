@@ -54,7 +54,7 @@ pub struct Tokens {
 
 impl Tokens {
     pub fn light() -> Tokens {
-        Tokens {
+        crate::freeandiy::tokens(Tokens {
             dark: false,
             window: Color32::from_rgb(0xF3, 0xF3, 0xF3),
             ribbon: Color32::from_rgb(0xFF, 0xFF, 0xFF),
@@ -92,11 +92,11 @@ impl Tokens {
             notice_warn_border: Color32::from_rgb(0xF0, 0xC3, 0x6E),
             notice_info_bg: Color32::from_rgb(0xEA, 0xF2, 0xFB),
             notice_info_border: Color32::from_rgb(0xB9, 0xD2, 0xEC),
-        }
+        })
     }
 
     pub fn dark() -> Tokens {
-        Tokens {
+        crate::freeandiy::tokens(Tokens {
             dark: true,
             window: Color32::from_rgb(0x29, 0x29, 0x29),
             ribbon: Color32::from_rgb(0x33, 0x33, 0x33),
@@ -134,7 +134,7 @@ impl Tokens {
             notice_warn_border: Color32::from_rgb(0x7A, 0x67, 0x30),
             notice_info_bg: Color32::from_rgb(0x24, 0x33, 0x44),
             notice_info_border: Color32::from_rgb(0x3B, 0x55, 0x72),
-        }
+        })
     }
 
     pub fn get(ctx: &egui::Context) -> Tokens {
@@ -430,6 +430,7 @@ pub fn font_definitions_with(language: crate::i18n::Language, used: &[String]) -
             }
         }
     }
+    crate::freeandiy::ui_fonts(&mut fonts);
     // Default proportional text in widgets uses the UI font.
     if let Some(ui) = fonts.families.get(&FontFamily::Name(UI.into())).cloned() {
         fonts.families.insert(FontFamily::Proportional, ui);
@@ -696,6 +697,7 @@ pub fn apply(ctx: &egui::Context, dark: bool) {
         v.window_corner_radius = egui::CornerRadius::same(10);
         v.menu_corner_radius = egui::CornerRadius::same(8);
         v.popup_shadow = egui::epaint::Shadow { offset: [0, 4], blur: 16, spread: 0, color: t.shadow };
+        crate::freeandiy::visuals(&mut v);
         ctx.set_visuals_of(theme, v);
     }
     ctx.options_mut(|o| o.fallback_theme = egui::Theme::Light);

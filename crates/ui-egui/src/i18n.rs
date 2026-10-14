@@ -16,6 +16,7 @@ mod fr;
 mod ko;
 mod pt;
 mod ru;
+mod sk;
 mod sr;
 mod zh;
 
@@ -35,10 +36,13 @@ pub enum Language {
     Cs,
     Fr,
     Sr,
+    /// Slovak (added by FreeANDIY).
+    Sk,
 }
 
 impl Language {
-    pub const ALL: [Self; 11] = [Self::En, Self::Es, Self::Zh, Self::Ja, Self::Ko, Self::Ru, Self::PtBr, Self::De, Self::Cs, Self::Fr, Self::Sr];
+    pub const ALL: [Self; 12] =
+        [Self::En, Self::Es, Self::Zh, Self::Ja, Self::Ko, Self::Ru, Self::PtBr, Self::De, Self::Cs, Self::Fr, Self::Sr, Self::Sk];
 
     /// The language's own name, shown in the switcher.
     pub fn name(self) -> &'static str {
@@ -54,6 +58,7 @@ impl Language {
             Self::Cs => "Čeština",
             Self::Fr => "Français",
             Self::Sr => "Srpski",
+            Self::Sk => "Slovenčina",
         }
     }
 
@@ -71,6 +76,7 @@ impl Language {
             Self::Cs => "cs",
             Self::Fr => "fr",
             Self::Sr => "sr",
+            Self::Sk => "sk",
         }
     }
 
@@ -91,6 +97,7 @@ impl Language {
             "cs" => Some(Self::Cs),
             "fr" => Some(Self::Fr),
             "sr" => Some(Self::Sr),
+            "sk" => Some(Self::Sk),
             _ => None,
         }
     }
@@ -129,6 +136,7 @@ impl Language {
             Self::Cs => cs::translate(text),
             Self::Fr => fr::translate(text),
             Self::Sr => sr::translate(text),
+            Self::Sk => sk::translate(text),
         };
         translated.unwrap_or_else(|| text.rsplit_once('|').map_or(text, |(_, label)| label))
     }
@@ -411,7 +419,7 @@ const JAPANESE: &[(&str, &str)] = &[
     ("Command\nPalette", "コマンド パレット"),
     ("Agent\nControl", "エージェント制御"),
     ("Action\nJournal", "操作ジャーナル"),
-    ("About\nGridCraft", "GridCraft について"),
+    ("About\nFreeANDIY Sheets", "FreeANDIY Sheets について"),
     ("Share", "共有"),
     ("Add Chart\nElement", "グラフ要素を追加"),
     ("Change\nChart Type", "グラフの種類の変更"),

@@ -1,7 +1,7 @@
 # Hosting GridCraft for the web
 
-`gridcraft-web-<version>.zip` (from the GitHub release, or `packaging/web/package.sh`) holds a
-static site in `gridcraft-web-<version>/`:
+`freeandiy-sheets-<version>-web-wasm32.zip` (from the GitHub release, or `packaging/web/package.sh`) holds a
+static site in `freeandiy-sheets-<version>-web-wasm32/`:
 
 | File | What it is |
 |---|---|
@@ -16,7 +16,7 @@ There is no server-side code. Upload the folder's contents anywhere that serves 
 
 All URLs in `index.html` are relative (`public_url = "./"` in `apps/gridcraft-web/Trunk.toml`),
 so the site works at a domain root (`https://example.com/`), under a prefix
-(`https://example.com/tools/gridcraft/`) and from a CDN bucket. The asset names carry a content
+(`https://example.com/tools/freeandiy-sheets/`) and from a CDN bucket. The asset names carry a content
 hash, so they can be cached forever. Only `index.html` needs revalidation.
 
 ## Required server settings
@@ -39,7 +39,7 @@ hash, so they can be cached forever. Only `index.html` needs revalidation.
 nginx example:
 
 ```nginx
-location /gridcraft/ {
+location /freeandiy-sheets/ {
     types { application/wasm wasm; text/javascript js; text/html html; }
     gzip on;
     gzip_types application/wasm text/javascript text/html;
@@ -54,7 +54,7 @@ Local test: `python3 -m http.server 8765` inside the folder, then open http://lo
 
 ```html
 <iframe
-  src="https://example.com/gridcraft/"
+  src="https://example.com/freeandiy-sheets/"
   title="GridCraft spreadsheet"
   style="width: 100%; height: 720px; border: 0;"
   allow="fullscreen; clipboard-read; clipboard-write"

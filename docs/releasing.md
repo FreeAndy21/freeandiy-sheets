@@ -85,7 +85,7 @@ and upload their artifacts, the environment refuses macOS and Windows, and no re
 | Linux riscv64 | `gridcraft-<v>-linux-riscv64.tar.gz` (cross-compiled, glibc >= 2.39; CLI smoke-tested under QEMU) | `ubuntu-24.04` |
 | Flatpak x86_64, aarch64 | `gridcraft-<v>-linux-<arch>.flatpak` (repackages the Linux tarball) | `ubuntu-24.04`, `ubuntu-24.04-arm` |
 | FreeBSD 14 x86_64 | `gridcraft-<v>-freebsd-x86_64.tar.gz` | FreeBSD 14.3 VM (`freebsd.yml`, called by `release.yml`) |
-| Web | `gridcraft-web-<v>.zip` (static site; see [`packaging/web/README.md`](../packaging/web/README.md)) | `ubuntu-latest` |
+| Web | `freeandiy-sheets-<v>-web-wasm32.zip` (static site; see [`packaging/web/README.md`](../packaging/web/README.md)) | `ubuntu-latest` |
 
 ### macOS
 
