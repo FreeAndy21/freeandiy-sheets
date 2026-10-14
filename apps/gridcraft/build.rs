@@ -16,7 +16,7 @@ fn main() {
     res.set_icon("../../assets/app-icon/freeandiy-sheets.ico")
         .set("ProductName", "FreeANDIY Sheets")
         .set("FileDescription", "FreeANDIY Sheets spreadsheet")
-        .set("CompanyName", "Learning Machines LLC")
+        .set("CompanyName", "Free Andy Agency")
         .set("LegalCopyright", "Copyright (c) Free Andy Agency and the GridCraft authors. MIT OR Apache-2.0.")
         .set("OriginalFilename", "freeandiy-sheets.exe")
         .set("InternalName", "freeandiy-sheets");
