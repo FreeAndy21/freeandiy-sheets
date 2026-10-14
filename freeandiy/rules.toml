@@ -246,12 +246,6 @@ min = 0
 # ---------------------------------------------------------------------------------------------
 # App-specific rules.
 
-[[replace]]
-name = "macOS Help menu: this app's page label"
-include = ["apps/gridcraft/src/native_menu.rs"]
-find = "GridCraft on getartcraft.com"
-replace = "{{this.name}} on freeandiy.freeandy.agency"
-min = 1
 
 # ---------------------------------------------------------------------------------------------
 # The product name in the UI, messages, translations, packaging and the web page.
