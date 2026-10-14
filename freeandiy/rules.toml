@@ -269,7 +269,8 @@ min = 0
 [[replace]]
 name = "product name GridCraft (Rust code, not comments; whole word)"
 include = ["**/*.rs"]
-exclude = ["xtask/**", "vendor/**"]
+# generated.rs: written by `cargo xtask keytips`, which upstream CI re-runs and compares.
+exclude = ["xtask/**", "vendor/**", "crates/ui-egui/src/keytips/keytip_table/generated.rs"]
 regex = '\bGridCraft\b'
 replace = "{{this.name}}"
 skip_comments = ["//"]
