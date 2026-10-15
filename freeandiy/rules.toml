@@ -494,3 +494,10 @@ include = ["packaging/**", "apps/*/build.rs"]
 find = "Learning Machines LLC"
 replace = "{{brand.owner}}"
 min = 1
+
+[[replace]]
+name = "web page: the favicon is our icon"
+include = ["apps/gridcraft-web/index.html"]
+find = "assets/app-icon/gridcraft.ico"
+replace = "assets/app-icon/{{this.repo}}.ico"
+min = 1
