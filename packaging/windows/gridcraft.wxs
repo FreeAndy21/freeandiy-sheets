@@ -155,6 +155,7 @@
 
     <Feature Id="Main" Title="FreeANDIY Sheets" Level="1">
       <ComponentGroupRef Id="GridcraftFiles" />
+      <ComponentGroupRef Id="FreeandiyNotices" />
     </Feature>
   </Package>
 
@@ -216,6 +217,13 @@
         <RegistryValue Root="HKMU" Key="Software\FreeANDIY Sheets\Installer" Name="DesktopShortcutComponent"
             Value="1" Type="integer" KeyPath="yes" />
       </Component>
+    </ComponentGroup>
+  </Fragment>
+  <!-- FreeANDIY: licences, NOTICE, attribution, font licences and brand terms (Apache-2.0 4(d)),
+       staged by package.ps1. -->
+  <Fragment>
+    <ComponentGroup Id="FreeandiyNotices" Directory="INSTALLFOLDER">
+      <Files Include="$(var.NoticesDir)\*" />
     </ComponentGroup>
   </Fragment>
 </Wix>
